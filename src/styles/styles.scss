@@ -10,8 +10,7 @@
   font-family: "Barlow Condensed", sans-serif;
 }
 
-// html,
-// body {
-//   // width: 100vw;
-//   height: 100vh;
-// }
+html,
+body {
+  min-height: 100vh;
+}
