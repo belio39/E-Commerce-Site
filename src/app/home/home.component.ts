@@ -13,6 +13,5 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.products = this.GetAllProducts.getAllProducts();
-    console.log(this.products);
   }
 }

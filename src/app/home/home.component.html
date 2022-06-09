@@ -6,31 +6,33 @@
   </div>
 </div> -->
 <section>
-  <div class="intro">
-    <h1>Welcome to E-shop</h1>
-    <p>
-      Online shoppin is great and all, but when retailers make it even easier to
-      nab the latest fashion trends(opens in new tab) via a fast, easy-to-use
-      app—especially when some provide insane discounts just for signing up—it
-      would be a sin not to take advantage of it. For example, Revolve Clothing
-      offers a 10 percent discount for first-time shoppers who make purchases on
-      its app. And if you're wondering—yes, I've downloaded the app just to
-      receive such a discount. Plus, most apps have alert notifications for new
-      arrivals or sales, so you never miss any of the news.
-    </p>
-    <div class="products">
-      <h1>What we sell at e-shop</h1>
-      <div class="catagory">
-        <div>
-          <img src="../../assets/men.jpg" alt="" />
-        </div>
-        <div><img src="../../assets/kids.jpg" alt="" /></div>
-        <div><img src="../../assets/ladies.jpg" alt="" /></div>
+  <div class="main">
+    <div class="info">
+      <header>
+        <h1><h1>Welcome to E-shop</h1></h1>
+        <p>
+          Online shoppin is great and all, but when retailers make it even
+          easier to nab the latest fashion trends(opens in new tab) via a fast,
+          easy-to-use app—especially when some provide insane discounts just for
+          signing up—it would be a sin not to take advantage of it. For example,
+          Revolve Clothing offers a 10 percent discount for first-time shoppers
+          who make purchases on its app. And if you're wondering—yes, I've
+          downloaded the app just to receive such a discount. Plus, most apps
+          have alert notifications for new arrivals or sales, so you never miss
+          any of the news.
+        </p>
+      </header>
+      <div class="category">
+        <img src="../../assets/kids.jpg" alt="" />
+        <img src="../../assets/ladies.jpg" alt="" />
+        <img src="../../assets/men.jpg" alt="" />
       </div>
     </div>
-    <div class="left" *ngFor="let products of products">
-      <h1>new arrivals</h1>
-      <img src="{{ products.image }}" alt="" />
+    <div><h2>New Arrivals</h2></div>
+    <div class="products">
+      <div class="items" *ngFor="let products of products">
+        <img src="{{ products.image }}" alt="Clothing" />
+      </div>
     </div>
   </div>
 </section>
