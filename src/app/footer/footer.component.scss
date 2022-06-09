@@ -1,6 +1,9 @@
 @import "~../../../../styles/variables";
 
 footer {
+  bottom: 0;
+  width: 100%;
+  position: fixed;
   .copyright {
     width: 100%;
     p {

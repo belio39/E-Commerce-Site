@@ -7,9 +7,13 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ShopComponent } from './shop/shop.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { LoginComponent } from './auth/login/login.component';
+import { SignupComponent } from './auth/signup/signup.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, FooterComponent, HomeComponent, PagenotfoundComponent],
+  declarations: [AppComponent, NavbarComponent, FooterComponent, HomeComponent, PagenotfoundComponent, ShopComponent, ContactusComponent, LoginComponent, SignupComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
