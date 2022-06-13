@@ -1,1 +1,54 @@
 <p>login works!</p>
+<div class="main-form">
+  <form [formGroup]="authLogin" (ngSubmit)="onSubmit()">
+    <h1>login</h1>
+    <label>Name</label>
+    <input
+      type="text"
+      formControlName="name"
+      name="name"
+      placeholder="Name..."
+    />
+    <div
+      *ngIf="authLogin.get('name')?.invalid && authLogin.get('name')?.touched"
+    >
+      <span class="error" *ngIf="authLogin.get('name')!.errors!['required']">
+        *Name is Required
+      </span>
+    </div>
+    <label>Email</label>
+    <input
+      type="text"
+      formControlName="email"
+      name="email"
+      placeholder="Email..."
+    />
+    <div
+      *ngIf="authLogin.get('email')?.invalid && authLogin.get('emil')?.touched"
+    >
+      <span class="error" *ngIf="authLogin.get('email')!.errors!['required']">
+        *Email is Required
+      </span>
+    </div>
+    <label>Password</label>
+    <input
+      type="text"
+      formControlName="password"
+      name="password"
+      placeholder="Password..."
+    />
+    <div
+      *ngIf="
+        authLogin.get('password')?.invalid && authLogin.get('password')?.touched
+      "
+    >
+      <span
+        class="error"
+        *ngIf="authLogin.get('password')!.errors!['required']"
+      >
+        *Password is Required
+      </span>
+    </div>
+    <button type="submit" [disabled]="authLogin.invalid">Submit</button>
+  </form>
+</div>
