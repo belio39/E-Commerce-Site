@@ -1,0 +1,18 @@
+<nav>
+  <div class="search-btn">
+    <img src="../../assets/search-outline.svg" alt="search-outline" />
+    <input type="text" placeholder="Search..." name="search" />
+  </div>
+  <div class="right">
+    <div class="nav-links">
+      <a
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLinkActive="a-default-link"
+        routerLink="/admin"
+        >Dashboard</a
+      >
+      <a routerLinkActive="a-default-link" routerLink="shop">Add</a>
+      <a routerLinkActive="a-default-link" routerLink="/logout">Logout</a>
+    </div>
+  </div>
+</nav>

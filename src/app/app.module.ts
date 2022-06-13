@@ -12,6 +12,9 @@ import { ShopComponent } from './shop/shop.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
+import { CartComponent } from './cart/cart.component';
+import { AdminDashComponent } from './admin-dash/admin-dash.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,9 @@ import { SignupComponent } from './auth/signup/signup.component';
     ContactusComponent,
     LoginComponent,
     SignupComponent,
+    CartComponent,
+    AdminDashComponent,
+    CarouselComponent,
   ],
   imports: [BrowserModule, ReactiveFormsModule, AppRoutingModule, FormsModule],
   providers: [],

@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
   constructor(private GetAllProducts: ProductsService) {}
 
   ngOnInit(): void {
+    console.log(this.GetAllProducts);
     this.products = this.GetAllProducts.getAllProducts();
   }
 }

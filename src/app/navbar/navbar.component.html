@@ -11,14 +11,16 @@
         routerLink="/"
         >Home</a
       >
-      <a routerLinkActive="a-default-link" routerLink="shop">Shop</a>
-      <a routerLinkActive="a-default-link" routerLink="contact-us"
+      <a routerLinkActive="a-default-link" routerLink="/shop">Shop</a>
+      <a routerLinkActive="a-default-link" routerLink="/contact-us"
         >Contact us</a
       >
-      <a routerLinkActive="a-default-link" routerLink="login">Login</a>
+      <a routerLinkActive="a-default-link" routerLink="/login">Login</a>
     </div>
     <div class="search-btn">
-      <img src="../../assets/shopping-cart.png" alt="search-outline" />
+      <a routerLinkActive="a-default-link" routerLink="/cart">
+        <img src="../../assets/shopping-cart.png" alt="search-outline" />
+      </a>
     </div>
   </div>
 </nav>
