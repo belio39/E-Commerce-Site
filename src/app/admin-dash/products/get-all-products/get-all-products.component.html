@@ -1,9 +1,26 @@
 <app-admin-dash></app-admin-dash>
-<div *ngFor="let product of products">
-  <a routerLinkActive="selected" [routerLink]="['/get-all-products', products]">
-    {{ product.name }}
-    <img src="{{ product.imageUrl }}" alt="" />
-    {{ product.price }}
-    {{ product.quantity }}
-  </a>
+<div class="container">
+  <div class="products">
+    <table>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>imageUrl</th>
+        <th>price</th>
+        <th>Quantity</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let product of products">
+        <th>1</th>
+        <td>{{ product.name }}</td>
+        <td>{{ product.imageUrl }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.quantity }}</td>
+        <td>
+          <img src="../../../../assets/create-outline.svg" alt="edit" />
+          <img src="../../../../assets/trash-outline.svg" alt="delete" />
+        </td>
+      </tr>
+    </table>
+  </div>
 </div>
