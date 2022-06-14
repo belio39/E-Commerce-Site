@@ -15,6 +15,10 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { CartComponent } from './cart/cart.component';
 import { AdminDashComponent } from './admin-dash/admin-dash.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { AddProductComponent } from './admin-dash/products/add-product/add-product.component';
+import { GetAllProductsComponent } from './admin-dash/products/get-all-products/get-all-products.component';
+import { DeleteProductComponent } from './admin-dash/products/delete-product/delete-product.component';
+import { EditProductComponent } from './admin-dash/products/edit-product/edit-product.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +34,10 @@ import { CarouselComponent } from './carousel/carousel.component';
     CartComponent,
     AdminDashComponent,
     CarouselComponent,
+    AddProductComponent,
+    GetAllProductsComponent,
+    DeleteProductComponent,
+    EditProductComponent,
   ],
   imports: [BrowserModule, ReactiveFormsModule, AppRoutingModule, FormsModule],
   providers: [],

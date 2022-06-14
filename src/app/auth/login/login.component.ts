@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
       password: new FormControl(null, Validators.required),
     });
     this.authLogin.statusChanges.subscribe((status) => {
-      setTimeout(() => {}, 2000);
+      setTimeout(() => {}, 3000);
       console.log(status);
     });
   }

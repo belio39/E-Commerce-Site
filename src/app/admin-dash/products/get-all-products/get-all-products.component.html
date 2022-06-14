@@ -1,0 +1,9 @@
+<app-admin-dash></app-admin-dash>
+<div *ngFor="let product of products">
+  <a routerLinkActive="selected" [routerLink]="['/get-all-products', products]">
+    {{ product.name }}
+    <img src="{{ product.imageUrl }}" alt="" />
+    {{ product.price }}
+    {{ product.quantity }}
+  </a>
+</div>

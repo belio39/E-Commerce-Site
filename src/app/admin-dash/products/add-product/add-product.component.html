@@ -1,0 +1,70 @@
+<app-admin-dash></app-admin-dash>
+<div class="container">
+  <form [formGroup]="products" (ngSubmit)="onSubmit()">
+    <h1>Add Product</h1>
+    <label>Name</label>
+    <input
+      formControlName="name"
+      type="text"
+      name="name"
+      placeholder="Name..."
+    />
+    <div *ngIf="products.get('name')?.invalid && products.get('name')?.touched">
+      <span class="error" *ngIf="products.get('name')!.errors!['required']">
+        *Name is Required
+      </span>
+    </div>
+
+    <label>Image Url</label>
+    <input
+      formControlName="imageUrl"
+      type="text"
+      name="imageUrl"
+      placeholder="Image Url..."
+    />
+    <div
+      *ngIf="
+        products.get('imageUrl')?.invalid && products.get('imageUrl')?.touched
+      "
+    >
+      <span class="error" *ngIf="products.get('imageUrl')!.errors!['required']">
+        *ImageUrl is Required
+      </span>
+    </div>
+
+    <label>Price</label>
+    <input
+      formControlName="price"
+      type="text"
+      name="price"
+      placeholder="Price..."
+    />
+
+    <div
+      *ngIf="products.get('price')?.invalid && products.get('price')?.touched"
+    >
+      <span class="error" *ngIf="products.get('price')!.errors!['required']">
+        *Price is Required
+      </span>
+    </div>
+
+    <label>Quantity</label>
+    <input
+      formControlName="quantity"
+      type="text"
+      name="quantity"
+      placeholder="Quantity..."
+    />
+    <div
+      *ngIf="
+        products.get('quantity')?.invalid && products.get('quantity')?.touched
+      "
+    >
+      <span class="error" *ngIf="products.get('quantity')!.errors!['required']">
+        *Quantity is Required
+      </span>
+    </div>
+
+    <button [disabled]="products.invalid" type="submit">Submit</button>
+  </form>
+</div>

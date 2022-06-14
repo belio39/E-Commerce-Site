@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminDashComponent } from './admin-dash/admin-dash.component';
+import { AddProductComponent } from './admin-dash/products/add-product/add-product.component';
+import { GetAllProductsComponent } from './admin-dash/products/get-all-products/get-all-products.component';
 import { LoginComponent } from './auth/login/login.component';
 import { CartComponent } from './cart/cart.component';
 import { ContactusComponent } from './contactus/contactus.component';
@@ -36,6 +38,14 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminDashComponent,
+  },
+  {
+    path: 'add-product',
+    component: AddProductComponent,
+  },
+  {
+    path: 'get-all-products',
+    component: GetAllProductsComponent,
   },
   {
     path: '**',
