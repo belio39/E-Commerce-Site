@@ -29,9 +29,9 @@ section {
     .products {
       width: 100%;
       background-color: #f8f9fa;
-      display: grid;
-      gap: 10px;
-      grid-template-columns: repeat(4, minmax(300px, 1fr));
+      // display: grid;
+      // gap: 10px;
+      // grid-template-columns: repeat(4, minmax(300px, 1fr));
 
       .items {
         img {

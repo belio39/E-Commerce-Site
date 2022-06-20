@@ -17,16 +17,40 @@
           any of the news.
         </p>
       </header>
-      <div class="category">
-        <img src="../../assets/kids.jpg" alt="" />
-        <img src="../../assets/ladies.jpg" alt="" />
-        <img src="../../assets/men.jpg" alt="" />
+      <div class="row row-cols-1 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card h-100">
+            <img src="../../assets/kids.jpg" class="card-img-top" alt="..." />
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="../../assets/kids.jpg" class="card-img-top" alt="..." />
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="../../assets/kids.jpg" class="card-img-top" alt="..." />
+          </div>
+        </div>
       </div>
     </div>
     <div><h2>New Arrivals</h2></div>
     <div class="products">
-      <div class="items" *ngFor="let products of products">
-        <img src="{{ products.imageUrl }}" alt="Clothing" />
+      <div class="row g-4">
+        <div class="col-md-3" *ngFor="let products of products">
+          <div class="card">
+            <img src="{{ products.imageUrl }}" alt="Clothing" />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

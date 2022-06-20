@@ -19,6 +19,9 @@ import { AddProductComponent } from './admin-dash/products/add-product/add-produ
 import { GetAllProductsComponent } from './admin-dash/products/get-all-products/get-all-products.component';
 import { DeleteProductComponent } from './admin-dash/products/delete-product/delete-product.component';
 import { EditProductComponent } from './admin-dash/products/edit-product/edit-product.component';
+import { MenComponent } from './shop/men/men.component';
+import { KidsComponent } from './shop/kids/kids.component';
+import { LadiesComponent } from './shop/ladies/ladies.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +41,9 @@ import { EditProductComponent } from './admin-dash/products/edit-product/edit-pr
     GetAllProductsComponent,
     DeleteProductComponent,
     EditProductComponent,
+    MenComponent,
+    KidsComponent,
+    LadiesComponent,
   ],
   imports: [BrowserModule, ReactiveFormsModule, AppRoutingModule, FormsModule],
   providers: [],
