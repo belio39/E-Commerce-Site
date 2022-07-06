@@ -1,19 +1,40 @@
 <app-navbar></app-navbar>
 <app-carousel></app-carousel>
-<div class="products">
-  <div class="row g-4">
-    <div class="col-md-3" *ngFor="let products of products">
-      <div class="card">
-        <!-- <img src="{{ products.imageUrl }}" alt="Clothing" /> -->
-        {{ products.category }}
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            This is a longer card with supporting text below as a natural
-            lead-in to additional content. This content is a little bit longer.
-          </p>
+
+<main>
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div *ngFor="let products of products" class="col">
+          <div class="card shadow-sm">
+            <img src="{{ products.imageUrl }}" alt="" />
+            <div class="card-body">
+              {{ products.category }}
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-outline-secondary"
+                  >
+                    {{ products.name }}
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-outline-secondary"
+                  >
+                    {{ products.price }}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</main>

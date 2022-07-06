@@ -1,6 +1,7 @@
-<app-admin-dash></app-admin-dash>
+<!-- <app-admin-dash></app-admin-dash> -->
 <div class="container">
   <div class="products">
+    <div class="alert alert-success" *ngIf="msg">{{ msg }}</div>
     <table>
       <tr>
         <th>#</th>
@@ -11,14 +12,22 @@
         <th>Action</th>
       </tr>
       <tr *ngFor="let product of products">
-        <th>1</th>
+        <th>#</th>
         <td>{{ product.name }}</td>
         <td>{{ product.imageUrl }}</td>
         <td>{{ product.price }}</td>
         <td>{{ product.quantity }}</td>
         <td>
-          <img src="../../../../assets/create-outline.svg" alt="edit" />
-          <img src="../../../../assets/trash-outline.svg" alt="delete" />
+          <img
+            routerLink="/edit-product/{{ product.id }}"
+            src="../../../../assets/create-outline.svg"
+            alt="edit"
+          />
+          <img
+            src="../../../../assets/trash-outline.svg"
+            (click)="deleteProduct(product.id)"
+            alt="delete"
+          />
         </td>
       </tr>
     </table>

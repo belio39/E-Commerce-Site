@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Products } from 'src/app/interface/products';
-import { GetAllProductsService } from 'src/app/services/products.service';
+import { ProductsData } from 'src/app/services/products.service';
 
 @Component({
   selector: 'app-kids',
@@ -9,7 +10,11 @@ import { GetAllProductsService } from 'src/app/services/products.service';
 })
 export class KidsComponent implements OnInit {
   products: Products[] = [];
-  constructor(private productsServices: GetAllProductsService) {}
+
+  constructor(
+    private productsServices: ProductsData,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     this.products = this.productsServices.getAllKidsCategory();

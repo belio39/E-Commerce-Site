@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Products } from 'src/app/interface/products';
-import { GetAllProductsService } from 'src/app/services/products.service';
+import { ProductsData } from 'src/app/services/products.service';
 
 @Component({
   selector: 'app-get-all-products',
@@ -9,11 +10,40 @@ import { GetAllProductsService } from 'src/app/services/products.service';
 })
 export class GetAllProductsComponent implements OnInit {
   products: Products[] = [];
+  product: Products = {
+    id: '',
+    name: '',
+    imageUrl: '',
+    price: '',
+    quantity: 0,
+    category: '',
+  };
 
-  constructor(private productsService: GetAllProductsService) {}
+  msg: string = '';
+
+  constructor(private productsData: ProductsData, private router: Router) {}
 
   ngOnInit(): void {
-    console.log(this.products);
-    this.products = this.productsService.getAllProducts();
+    this.productsData.getAllproducts().subscribe((data) => {
+      this.products = data.products;
+    });
+  }
+
+  getProduct(id: string) {
+    this.productsData.editProduct(id).subscribe((data) => {
+      this.product = data;
+      this.router.navigate(['/edit-product']);
+    });
+  }
+
+  deleteProduct(id: string) {
+    this.productsData.deleteProduct(id).subscribe(
+      (res) => {
+        console.log(res);
+        this.msg = res.message;
+        this.ngOnInit();
+      },
+      (error) => console.log(error)
+    );
   }
 }

@@ -1,5 +1,6 @@
-<app-admin-dash></app-admin-dash>
+<!-- <app-admin-dash></app-admin-dash> -->
 <div class="container">
+  <div class="alert alert-success" *ngIf="msg">{{ msg }}</div>
   <form [formGroup]="products" (ngSubmit)="onSubmit()">
     <h1>Add Product</h1>
     <label>Name</label>
